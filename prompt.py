@@ -1,7 +1,10 @@
 import streamlit as st
 from langchain_core.prompts import PromptTemplate
-from langchain_google_genai import ChatGoogleGenerativeAI
-from lan import API_KEY
+from langchain_google_genai import ChatGoogleGenerativeAITRY
+try:
+    API_KEY = st.secrets["GOOGLE_API_KEY"]
+except:
+    from lan import API_KEY
 import os
 
 os.environ["GOOGLE_API_KEY"] = API_KEY
