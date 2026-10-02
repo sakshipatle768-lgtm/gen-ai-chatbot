@@ -1,6 +1,6 @@
 import streamlit as st
 from langchain_core.prompts import PromptTemplate
-from langchain_google_genai import ChatGoogleGenerativeAITRY
+from langchain_google_genai import ChatGoogleGenerativeAI
 try:
     API_KEY = st.secrets["GOOGLE_API_KEY"]
 except:
